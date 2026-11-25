@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Papers – Shindo Bajada Amacan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,700;1,500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+tailwind.config={darkMode:'media',theme:{extend:{fontFamily:{display:['Fraunces','Georgia','serif'],sans:['"DM Sans"','system-ui','sans-serif']},colors:{bg:'var(--bg)',ink:'var(--ink)',muted:'var(--muted)',line:'var(--line)',accent:'var(--accent)',pink:'var(--pink)',glow:'var(--glow)',surface:'var(--surface)',onaccent:'var(--on)'}}}}
+</script>
+<style>
+:root{color-scheme:dark;--bg:#0e0e10;--surface:#1a1815cc;--ink:#f2ede4;--muted:#a59f93;--line:#312d27;--accent:#dcb572;--pink:#e5906e;--glow:#4a3720;--on:#15110b;--b1:#5a3d18;--b2:#7a3f2c;--b3:#4a3720;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth}
+body{background:var(--bg);overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+.blob{position:fixed;border-radius:9999px;filter:blur(80px);pointer-events:none;z-index:-1;opacity:.65;animation:float 18s ease-in-out infinite alternate}
+@keyframes float{to{transform:translate(40px,30px) scale(1.12)}}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.rise{animation:rise .8s ease both}.d1{animation-delay:.12s}.d2{animation-delay:.24s}
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+.eyebrow{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--pink);font-weight:700;margin-bottom:10px}
+.grad{background:linear-gradient(100deg,var(--accent),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent;font-style:italic}
+header nav a{background:linear-gradient(var(--pink),var(--pink)) 0 100%/0 2px no-repeat;padding-bottom:2px;transition:background-size .3s ease,color .25s ease}
+header nav a.on{color:var(--accent);background-size:100% 2px}
+.layout{display:grid;gap:20px;grid-template-columns:1fr}
+@media (min-width:900px){.side{display:grid;grid-template-columns:repeat(3,1fr);overflow:visible}}
+.side{display:flex;gap:12px;overflow-x:auto;padding:4px;scroll-snap-type:x mandatory}
+
+.card{flex:0 0 78%;scroll-snap-align:start;text-align:left;cursor:pointer;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:18px 20px;backdrop-filter:blur(16px);transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+@media (min-width:900px){.card{flex:none}}
+.card .no{font-family:Fraunces,Georgia,serif;font-style:italic;font-weight:700;font-size:15px;color:var(--pink)}
+.card h3{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:20px;line-height:1.2;margin:2px 0 6px}
+.card p{margin:0;font-size:14px;color:var(--muted);line-height:1.45}
+.card[aria-selected="true"]{border-color:var(--accent);box-shadow:0 18px 44px -18px var(--accent);background:linear-gradient(135deg,var(--glow),var(--surface))}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:28px;backdrop-filter:blur(16px);overflow:hidden;box-shadow:0 30px 60px -30px var(--glow)}
+.bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;padding:12px 18px;border-bottom:1px solid var(--line)}
+.dots{display:flex;gap:6px}.dots i{width:10px;height:10px;border-radius:50%;background:var(--line)}.dots i:first-child{background:var(--pink)}.dots i:nth-child(2){background:var(--accent)}
+.act{display:inline-block;padding:7px 16px;border-radius:9999px;border:1.5px solid var(--accent);font-weight:700;font-size:13px;text-decoration:none;color:var(--accent);transition:transform .25s ease,background-color .25s ease,color .25s ease}
+.act-p{background:var(--accent);color:var(--on)}
+.panel iframe{width:100%;height:92vh;min-height:640px;border:0;background:#fff;display:block}
+@media (hover:hover){
+  header nav a:hover{background-size:100% 2px;color:var(--ink)}
+  .card:hover{transform:translateY(-4px);border-color:var(--accent)}
+  .act:hover{transform:translateY(-2px);background:var(--accent);color:var(--on)}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none !important;animation:none !important}}
+</style>
+</head>
+<body class="font-sans text-[17px] leading-relaxed text-ink">
+<div class="blob w-[460px] h-[460px] -top-28 -right-24" style="background:var(--b1)"></div>
+<div class="blob w-[380px] h-[380px] -bottom-28 -left-24" style="background:var(--b2);animation-delay:-6s"></div>
+<div class="blob w-[300px] h-[300px] top-1/2 left-1/2" style="background:var(--b3);opacity:.4;animation-delay:-11s"></div>
+
+<header class="sticky top-0 z-20 bg-surface backdrop-blur-xl border-b border-line" style="top:env(safe-area-inset-top,0px)">
+<div class="max-w-6xl mx-auto px-6 py-3.5 flex flex-wrap items-center justify-between gap-4">
+<a href="index.html" class="font-display font-bold italic text-xl text-ink no-underline">✦ Shindo Amacan</a>
+<nav aria-label="Sections" class="flex flex-wrap gap-5 text-[15px] font-medium">
+<a class="text-muted no-underline" href="index.html#skills">Skills</a>
+<a class="text-muted no-underline" href="index.html#work">Projects</a>
+<a class="text-muted no-underline" href="cert.html">Certificates</a>
+<a class="on no-underline" href="doc.html" aria-current="page">Documents</a>
+<a class="text-muted no-underline" href="index.html#contact">Contact</a>
+</nav>
+</div>
+</header>
+
+<main class="max-w-6xl mx-auto px-6 pb-16">
+<div class="pt-12 md:pt-16 pb-8">
+<p class="eyebrow rise">✦ The paperwork</p>
+<h1 class="rise d1 font-display font-bold text-[clamp(38px,6.5vw,64px)] leading-[1.05] tracking-tight">Papers &amp; <span class="grad">write-ups</span></h1>
+<p class="rise d2 text-muted text-xl max-w-[34em] mt-3">Pick a document to read it right here. Each one is also free to download.</p>
+</div>
+
+<div class="layout">
+<div class="side" role="tablist" aria-label="Documents">
+<button class="card" role="tab" data-k="resume" aria-selected="true"><span class="no">01 · PDF</span><h3>Resume</h3><p>My skills, projects and education on a clean ATS-friendly page.</p></button>
+<button class="card" role="tab" data-k="cover" aria-selected="false"><span class="no">02 · PDF</span><h3>Cover Letter</h3><p>A short introduction of who I am and what I want to do.</p></button>
+<button class="card" role="tab" data-k="sop" aria-selected="false"><span class="no">03 · PDF</span><h3>Standard Operating Procedure</h3><p>A step-by-step guide written in plain words.</p></button>
+</div>
+
+<div class="panel">
+<div class="bar">
+<div class="flex items-center gap-3"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><strong id="ttl" class="font-display italic text-lg">Resume</strong></div>
+<div class="flex gap-2">
+<a id="nt" class="act" href="#" target="_blank" rel="noopener">Open ↗</a>
+<a id="dl" class="act act-p" href="#" download>Download ↓</a>
+</div>
+</div>
+<iframe id="frame" title="Document viewer" src=""></iframe>
+</div>
+</div>
+
+</main>
+
+<script>
+(function(){
+/* Put these PDF files in the same folder as doc.html (or change the names below). */
+var DOCS={
+  resume:{t:'Resume',f:'Shindo_Amacan_ats_resume_final.pdf.pdf'},
+  cover:{t:'Cover Letter',f:'Cover_letter.pdf.pdf'},
+  sop:{t:'Standard Operating Procedure',f:'Developer Guide.pdf.pdf'}
+};
+var tabs=document.querySelectorAll('[role=tab]'),fr=document.getElementById('frame'),dl=document.getElementById('dl'),nt=document.getElementById('nt'),ttl=document.getElementById('ttl');
+function show(k){
+  if(!DOCS[k])k='resume';
+  var u=encodeURI(DOCS[k].f);
+  fr.src=u+"#navpanes=0&view=FitH";dl.href=u;nt.href=u;ttl.textContent=DOCS[k].t;
+  tabs.forEach(function(b){b.setAttribute('aria-selected',b.dataset.k===k)});
+  try{history.replaceState(null,'','#'+k)}catch(e){}
+}
+tabs.forEach(function(b){b.addEventListener('click',function(){show(b.dataset.k)})});
+show(location.hash.slice(1));
+})();
+</script>
+</body>
+</html>
